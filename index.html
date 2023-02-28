@@ -17,22 +17,26 @@
   <script type="module"src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
-<!-- Import the component 
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>-->
-
 </head>
 
-<body class="w-100 sans-serif bg-white">
+<body class="w-100 sans-serif bg-white" style="background-color:rgb(207, 207, 207);" >
 
 <!-- Use it like any other HTML element -->
 <model-viewer  
+              alt="Santana, a small village of restored houses"
               src="https://raw.githubusercontent.com/diegoUE8/b-here-vercel/id4ex/docs/models/house.glb" 
               ios-src="https://raw.githubusercontent.com/diegoUE8/b-here-vercel/id4ex/docs/models/house.usdz"
-              alt="Santana, a small village of restored houses" auto-rotate camera-controls background-color="#ffffff"
-              ar magic-leap unstable-webxr>
+              skybox-image="https://raw.githubusercontent.com/diegoUE8/b-here-vercel/id4ex/docs/textures/background/neutral.jpg" 
+              environment-image="https://raw.githubusercontent.com/diegoUE8/b-here-vercel/id4ex/docs/textures/envMap/studio.hdr" 
+              auto-rotate 
+              camera-controls
+              ar ar-modes="webxr scene-viewer quick-look" 
+              ar-scale="auto" magic-leap unstable-webxr>
+
+              <article class="article">
+                <h1><img src="logo.png"width="200" height="100"></h1>
+                <p> 3D Scan of Santana House</p>
+              </article>
 
               <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
@@ -43,13 +47,6 @@
                 <img src="ar_hand_prompt.png">
               </div>
 </model-viewer>
-
-<article class="w-100 pa3 pa5-ns">
-  <h1 class="f-headline lh-solid"><img src="logo.png"width="200" height="100"></h1>
-  <p class="measure lh-copy">
-    3D scan of a Madeira traditional house.
-  </p>
-</article>
 
 </body>
 
